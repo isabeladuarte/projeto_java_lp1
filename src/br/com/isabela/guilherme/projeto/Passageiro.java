@@ -16,4 +16,9 @@ public class Passageiro {
 	 public String getCpf() {
 		 return cpf;
 	 }
+
+	@Override
+	public String toString() {
+		return "Passageiro [nome=" + nome + ", cpf=" + cpf + "]";
+	}
 }

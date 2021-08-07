@@ -1,11 +1,22 @@
 package br.com.isabela.guilherme.projeto;
 
+import java.util.Arrays;
+
 public class Aviao extends Aeronave {
 	public Passageiro[][] lugares;
+	public int idAviao;
 
 	public Aviao(String modelo, int numeroTotalfileiras, int totalAssentoPorFileira) {
 		super(modelo);
 		this.lugares = new Passageiro[numeroTotalfileiras][totalAssentoPorFileira]; // Criando matriz com um determinado tamanho
+	}
+	
+	public int getIdAviao() {
+		return idAviao;
+	}
+
+	public void setIdAviao(int idAviao) {
+		this.idAviao = idAviao;
 	}
 
 	public Passageiro[][] getLugares() {
@@ -36,6 +47,11 @@ public class Aviao extends Aeronave {
 		
 		System.out.println("Lugar ocupado");
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Aviao [lugares=" + lugares + "]";
 	}
 	
 }
